@@ -111,6 +111,18 @@ watches:
 python -m dealdex scan --rules rules.yml
 ```
 
+### 5) Run the API server
+
+```bash
+uvicorn dealdex.api:app --reload
+```
+
+Query card info:
+
+```bash
+curl http://localhost:8000/cards/Black%20Lotus
+```
+
 ---
 
 ## 🔔 Alerts (Discord)
