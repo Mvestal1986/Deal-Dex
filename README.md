@@ -1,6 +1,6 @@
 # Deal-Dex
 
-**Deal-Dex** is a bot that watches for **Pokémon** and **Magic: The Gathering** card deals on **eBay** and **TCGplayer**.  
+**Deal-Dex** is a bot that watches for **Pokémon** and **Magic: The Gathering** card deals on **eBay** and **TCGplayer**.
 It scans listings, checks them against your rules, and pushes alerts to **Discord (via Apprise)**.
 
 ![CI](https://img.shields.io/github/actions/workflow/status/your-org/deal-dex/ci.yml)
@@ -28,9 +28,9 @@ It scans listings, checks them against your rules, and pushes alerts to **Discor
 └─────────────┘     └──────────────┘     └────────────┘     └─────────────┘
 ```
 
-1. Feeds pull listings from eBay & TCGplayer  
-2. Engine checks them against your rules (`rules.yml`)  
-3. Matching deals get pushed into **Discord**  
+1. Feeds pull listings from eBay & TCGplayer
+2. Engine checks them against your rules (`rules.yml`)
+3. Matching deals get pushed into **Discord**
 
 ---
 
@@ -112,6 +112,18 @@ watches:
 python -m dealdex scan --rules rules.yml
 ```
 
+### 5) Run the API server
+
+```bash
+uvicorn dealdex.api:app --reload
+```
+
+Query card info:
+
+```bash
+curl http://localhost:8000/cards/Black%20Lotus
+```
+
 ---
 
 ## 🔔 Alerts (Discord)
@@ -170,4 +182,3 @@ jobs:
 ## 📜 License
 
 MIT © You & Contributors
-# Deal-Dex
