@@ -1,0 +1,20 @@
+defaults:
+  currency: USD
+  max_shipping: 6.00
+  min_seller_feedback: 98
+  exclude_keywords: ["proxy", "damaged", "heavy played"]
+
+watches:
+  - name: "MTG Staples"
+    market: ["ebay", "tcgplayer"]
+    include_keywords: ["Liliana of the Veil", "Fury"]
+    condition: ["NM", "LP"]
+    max_price: 35.00
+    percent_below_market: 15
+
+  - name: "Pokemon ETBs"
+    market: ["ebay"]
+    include_keywords: ["Elite Trainer Box"]
+    set_filter: ["151", "Obsidian Flames"]
+    condition: ["Sealed"]
+    max_price: 45.00
