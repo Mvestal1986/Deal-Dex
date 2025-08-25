@@ -5,3 +5,4 @@ pydantic
 sqlalchemy
 typer
 pytest
+pre-commit
